@@ -1,5 +1,5 @@
 <input type="text" />
 
-<p *ngFor="let card of cards" (click)="clickItem()">
-  {{ performItem(card) }}
+<p *ngFor="let user of cards" (click)="clickItem()">
+  <app-user-card [user]="user"></app-user-card>
 </p>

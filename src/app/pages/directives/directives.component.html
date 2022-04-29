@@ -1,11 +1,11 @@
 <ng-container
-  *init="{
+  *ngIf="{
     myStream: myStream$ | async,
     otherStream: otherStream$ | async
   } as params"
 >
-<!--  <h3 *ngIf="params.myStream">{{ params.myStream }}</h3>-->
-<!--  <h3 *ngIf="params.otherStream">{{ params.otherStream }}</h3>-->
+  <h3>{{ params.myStream }}</h3>
+  <h3>{{ params.otherStream }}</h3>
 </ng-container>
 
 <p>{{ coldStream$ | async }}</p>

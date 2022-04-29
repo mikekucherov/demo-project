@@ -8,7 +8,11 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 export class PipesComponent implements OnInit {
 
   // TODO Fill array with random values
-  cards = new Array(50).fill(1);
+  cards = new Array(50).fill(1).map(v => {
+    return {
+      name: 'Mike'
+    };
+  });
 
   constructor() { }
 
