@@ -1,0 +1,12 @@
+<div class="user-card">
+  <img
+    (mouseenter)="isHighlighted = true"
+    (mouseleave)="isHighlighted = false"
+    src="assets/man5-512.webp"
+    alt="avatar"
+    class="user-card_avatar"
+  />
+  <h2 class="user-card_name" [class.user-card_name--highlight]="isHighlighted">
+    {{ user.name | call : toUpperCaseWithAddition : addition }}
+  </h2>
+</div>
