@@ -19,6 +19,13 @@ const routes: Routes = [
         (m) => m.DirectivesModule
       ),
   },
+  {
+    path: 'loading',
+    loadChildren: () =>
+      import('./pages/loading/loading.module').then(
+        (m) => m.LoadingModule
+      ),
+  },
 ];
 
 @NgModule({
