@@ -1,0 +1,55 @@
+<div class="loading-container">
+  <div
+    *ngFor="let card of loadingService.cards"
+    class="loading-container__card-container"
+  >
+    <mat-card> Card ID: {{ card }} </mat-card>
+    <button
+      mat-mini-fab
+      color="warn"
+      class="loading-container__small-button"
+      (click)="deleteCard(card)"
+    >
+      <mat-icon *ngIf="loadingIndicatorValue !== card; else loadingIndicator"
+        >delete</mat-icon
+      >
+    </button>
+  </div>
+
+  <div class="loading-container__card-container">
+    <button
+      mat-raised-button
+      color="accent"
+      class="loading-container__big-button"
+      [disabled]="loadingIndicatorValue === loadingIndicatorsEnum.Add"
+      (click)="addCard()"
+    >
+      <p
+        *ngIf="
+          loadingIndicatorValue !== loadingIndicatorsEnum.Add;
+          else loadingIndicator
+        "
+      >
+        Add card
+      </p>
+    </button>
+    <button
+      mat-mini-fab
+      color="accent"
+      class="loading-container__small-button"
+      (click)="refreshCards()"
+    >
+      <mat-icon
+        *ngIf="
+          loadingIndicatorValue !== loadingIndicatorsEnum.Refresh;
+          else loadingIndicator
+        "
+        >autorenew</mat-icon
+      >
+    </button>
+  </div>
+
+  <ng-template #loadingIndicator>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>

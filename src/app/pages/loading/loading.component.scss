@@ -1,0 +1,54 @@
+::ng-deep .mat-spinner {
+  width: 16px !important;
+  height: 16px !important;
+
+  margin: 8px !important;
+
+  ::ng-deep circle {
+    stroke: white !important;
+  }
+}
+
+::ng-deep svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  height: 100vh;
+
+  &__card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__big-button {
+    display: flex;
+    justify-content: center;
+
+    width: 128px;
+    height: 40px;
+  }
+
+  &__small-button {
+    margin-left: 16px;
+  }
+}

@@ -8,5 +8,6 @@ import { MultipleAsyncComponent } from './examples/multiple-async/multiple-async
 @NgModule({
   declarations: [DirectivesComponent, InitDirective, MultipleAsyncComponent],
   imports: [CommonModule, DirectivesRoutingModule],
+  exports: [InitDirective]
 })
 export class DirectivesModule {}
